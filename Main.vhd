@@ -55,8 +55,6 @@ component DigitLights is
 	Port ( L : out  STD_LOGIC_VECTOR (6 downto 0);
            NUMBER : in  INTEGER);
 end component;
-
-	signal digitLights1: INTEGER := 9;
 	
 	signal state: INTEGER := 0;
 	signal state_next: INTEGER := 0;
@@ -81,14 +79,19 @@ end component;
 	signal Ram1State: INTEGER := 0;
 	signal Ram2State: INTEGER := 0;
 	
-	-- 0 Reset; 1 Ram1 Combine; 2 Ram2 Combine; 3 Ram1 Data; 4 Ram2 Data; 5 Ram1 Addr; 6 Ram2 Addr;
+	-- 0 Display normally; 1 Ram1 Combine; 2 Ram2 Combine; 3 Ram1 Data; 4 Ram2 Data; 5 Ram1 Addr; 6 Ram2 Addr;
 	signal DisplayState: INTEGER := 0;
+	signal Display: STD_LOGIC_VECTOR (15 downto 0):="0000000000000000";
 	
 begin
 	
 	process(CLK, RST)
 	begin
-
+		if(RST='0')then
+			next_state <= 0;
+		elsif(CLK'EVENT and CLK='1')then
+			state	<= next_state;
+		end if;
 	end process;
 	
 	process(state)
@@ -102,14 +105,16 @@ begin
 			when 1		=>
 				addr			<=	SW;
 				state_next	<= 2;
+				Display		<=	addr;
 			when 2		=>
 				data			<=	SW;
 				state_next	<= 3;
-				-- LIGHT
+				Display		<= data;
 			when 3		=>
 				InputData1	<= data + to_stdlogicvector(offset);
 				InputAddr1	<= addr + to_stdlogicvector(offset);
 				Rem1State	<= 2;
+				DisplayState<= 1;
 				state_next	<= 4;
 			when 4		=>
 				Rem1State	<= 0;
@@ -123,17 +128,63 @@ begin
 					state_next <= 3;
 				end if;
 			when 6		=>
-				
+				InputAddr1	<= addr + to_stdlogicvector(offset);
+				Rem1State	<= 1;
+				state_next	<= 7;
+			when 7		=>
+				if(offset=9) then
+					offset <= 0;
+					state_next <= 8;
+				else
+					offset <= offset+1;
+					state_next <= 6;
+				end if;
+			when 8		=>
+				InputAddr1	<= addr + to_stdlogicvector(offset);
+				InputAddr2	<=	InputAddr1;
+				Ram1State	<=	1;
+				DisplayState<= 1;
+				state_next	<= 9;
+			when 9		=>
+				InputData2	<= OutputData1-to_stdlogicvector(1);
+				Ram2State	<= 2;
+				DisplayState<= 2;
+				state_next	<= 10;
+			when 10		=>
+				Ram2State	<= 0;
+				if(offset=9) then
+					offset <= 0;
+					state_next <= 11;
+				else
+					offset <= offset+1;
+					state_next <= 8;
+				end if;
+			when 11		=>
+				InputData2	<= addr + to_stdlogicvector(offset);
+				Ram2State	<= 2;
+				DisplayState<= 4;
+				state_next	<= 12;
+			when 12		=>
+				Ram2State	<= 0;
+				if(offset=9) then
+					offset <= 0;
+					state_next <= 0;
+				else
+					offset <= offset+1;
+					state_next <= 11;
+				end if;
+			when others	=>
+				state_next	<= 0;
 		end case;
 	end process;
 	
-	U1: DigitLights port map (DYP0,digitLights1);
+	U1: DigitLights port map (DYP0,offset);
 	U2: DigitLights port map (DYP1,state);
 	
 	RAM1: RAM port map (Ram1Data,Ram1Addr,Ram1OE,Ram1WE,Ram1EN,InputData1,InputAddr1,OutputData1,OutputAddr1,Ram1State);
 	RAM2: RAM port map (Ram2Data,Ram2Addr,Ram2OE,Ram2WE,Ram2EN,InputData2,InputAddr2,OutputData2,OutputAddr2,Ram2State);
 	
-	LEDLights1: LEDLights port map (OutputData1, OutputAddr1, OutputData2, OutputAddr2, L, DisplayState);
+	LEDLights1: LEDLights port map (OutputData1, OutputAddr1, OutputData2, OutputAddr2, Display, L, DisplayState);
 	
 end Behavioral;
 
