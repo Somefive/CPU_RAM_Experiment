@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_SIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -55,26 +56,84 @@ component DigitLights is
            NUMBER : in  INTEGER);
 end component;
 
-	signal digitLights1: INTEGER := 0;
-	signal digitLights2: INTEGER := 9;
+	signal digitLights1: INTEGER := 9;
+	
+	signal state: INTEGER := 0;
+	signal state_next: INTEGER := 0;
+	
+	signal data: STD_LOGIC_VECTOR (15 downto 0):="0000000000000000";
+	signal addr: STD_LOGIC_VECTOR (15 downto 0):="0000000000000000";
 
+	
+	signal offset: INTEGER := 0;
+	
+	signal InputAddr1: STD_LOGIC_VECTOR (15 downto 0);
+	signal InputData1: STD_LOGIC_VECTOR (15 downto 0);
+	signal InputAddr2: STD_LOGIC_VECTOR (15 downto 0);
+	signal InputData2: STD_LOGIC_VECTOR (15 downto 0);
+	
+	signal OutputAddr1: STD_LOGIC_VECTOR (15 downto 0);
+	signal OutputData1: STD_LOGIC_VECTOR (15 downto 0);
+	signal OutputAddr2: STD_LOGIC_VECTOR (15 downto 0);
+	signal OutputData2: STD_LOGIC_VECTOR (15 downto 0);
+	
+	-- 0 Reset; 1 Read; 2 Write;
+	signal Ram1State: INTEGER := 0;
+	signal Ram2State: INTEGER := 0;
+	
+	-- 0 Reset; 1 Ram1 Combine; 2 Ram2 Combine; 3 Ram1 Data; 4 Ram2 Data; 5 Ram1 Addr; 6 Ram2 Addr;
+	signal DisplayState: INTEGER := 0;
+	
 begin
 	
 	process(CLK, RST)
 	begin
-		L 			<= "0000000000000000";
-		Ram1Addr <= "000000000000000000";
-		Ram1Data <= "0000000000000000";
-		Ram1OE 	<= '0';
-		Ram1WE	<= '0';
-		Ram1EN	<= '0';
-		Ram2Addr <= "000000000000000000";
-		Ram2Data <= "0000000000000000";
-		Ram2OE 	<= '0';
-		Ram2WE	<= '0';
-		Ram2EN	<= '0';
+
 	end process;
+	
+	process(state)
+	begin
+		case state is
+			when 0		=>
+				Rem1State	<= 0;
+				Rem2State	<= 0;
+				DisplayState<= 0;
+				state_next	<= 1;
+			when 1		=>
+				addr			<=	SW;
+				state_next	<= 2;
+			when 2		=>
+				data			<=	SW;
+				state_next	<= 3;
+				-- LIGHT
+			when 3		=>
+				InputData1	<= data + to_stdlogicvector(offset);
+				InputAddr1	<= addr + to_stdlogicvector(offset);
+				Rem1State	<= 2;
+				state_next	<= 4;
+			when 4		=>
+				Rem1State	<= 0;
+				state_next	<= 5;
+			when 5		=>
+				if(offset=9) then
+					offset <= 0;
+					state_next <= 6;
+				else
+					offset <= offset+1;
+					state_next <= 3;
+				end if;
+			when 6		=>
+				
+		end case;
+	end process;
+	
 	U1: DigitLights port map (DYP0,digitLights1);
-	U2: DigitLights port map (DYP1,digitLights2);
+	U2: DigitLights port map (DYP1,state);
+	
+	RAM1: RAM port map (Ram1Data,Ram1Addr,Ram1OE,Ram1WE,Ram1EN,InputData1,InputAddr1,OutputData1,OutputAddr1,Ram1State);
+	RAM2: RAM port map (Ram2Data,Ram2Addr,Ram2OE,Ram2WE,Ram2EN,InputData2,InputAddr2,OutputData2,OutputAddr2,Ram2State);
+	
+	LEDLights1: LEDLights port map (OutputData1, OutputAddr1, OutputData2, OutputAddr2, L, DisplayState);
+	
 end Behavioral;
 
