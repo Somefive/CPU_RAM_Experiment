@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.xst" -ofn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.syr" 
+xst -intstyle ise -ifn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.xst" -ofn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.syr" 
