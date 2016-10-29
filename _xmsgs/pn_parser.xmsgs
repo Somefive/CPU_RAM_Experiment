@@ -8,13 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/bingochen/Desktop/Junior/cpu/project/ram/CPU_RAM_Experiment/DigitLights.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/bingochen/Desktop/Junior/cpu/project/ram/CPU_RAM_Experiment/LEDLights.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/bingochen/Desktop/Junior/cpu/project/ram/CPU_RAM_Experiment/Main.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/CPU_RAM_Experiment/SRAMController.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
