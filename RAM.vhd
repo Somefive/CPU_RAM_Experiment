@@ -67,9 +67,13 @@ begin
 		end case;
 	end process;
 	
-	process(InputData, InputAddr)
+	process(InputData)
 	begin
 		Data <= InputData;
+	end process;
+	
+	process(InputAddr)
+	begin
 		Addr <= "00"&InputAddr;
 	end process;
 	

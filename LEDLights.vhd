@@ -61,6 +61,8 @@ begin
 				L <= addr1;
 			when 6 =>
 				L <= addr2;
+			when others =>
+				L <= "0000000000000000";
 		end case;
 	end process;
 

@@ -1,2 +1,4 @@
+vhdl work "RAM.vhd"
+vhdl work "LEDLights.vhd"
 vhdl work "DigitLights.vhd"
 vhdl work "Main.vhd"

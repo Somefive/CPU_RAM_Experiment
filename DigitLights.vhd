@@ -38,7 +38,7 @@ architecture Behavioral of DigitLights is
 begin
 	process(NUMBER)
 	begin
-		case number is
+		case (number mod 16) is
 			when 0		=>	L<="1111110"; --0
 			when 1		=>	L<="0110000"; --1
 			when 2		=>	L<="1101101"; --2

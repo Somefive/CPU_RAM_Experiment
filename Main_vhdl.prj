@@ -1,2 +1,4 @@
+vhdl work "D:\Study\THU\2016Autumn\CPU\CPU_RAM_Experiment\RAM.vhd"
+vhdl work "D:\Study\THU\2016Autumn\CPU\CPU_RAM_Experiment\LEDLights.vhd"
 vhdl work "D:\Study\THU\2016Autumn\CPU\CPU_RAM_Experiment\DigitLights.vhd"
 vhdl work "D:\Study\THU\2016Autumn\CPU\CPU_RAM_Experiment\Main.vhd"
