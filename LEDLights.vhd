@@ -34,9 +34,9 @@ entity LEDLights is
            addr1 : in  STD_LOGIC_VECTOR(15 downto 0);
 			  data2 : in  STD_LOGIC_VECTOR(15 downto 0);
            addr2 : in  STD_LOGIC_VECTOR(15 downto 0); 
-           flag : in  INTEGER;
-           info : in  STD_LOGIC_VECTOR(15 downto 0);
-           L : out  STD_LOGIC_VECTOR(15 downto 0)
+           display : in  STD_LOGIC_VECTOR(15 downto 0);
+           L : out  STD_LOGIC_VECTOR(15 downto 0);
+			  DisplayState : in  INTEGER
 			  );
 end LEDLights;
 
@@ -44,11 +44,11 @@ architecture Behavioral of LEDLights is
 
 begin
 
-	process(flag)
+	process(DisplayState)
 	begin
-		case flag is
+		case DisplayState is
 			when 0 =>
-				L <= info;
+				L <= display;
 			when 1 =>
 				L <= addr1(7 downto 0) & data1(7 downto 0);
 			when 2 =>
