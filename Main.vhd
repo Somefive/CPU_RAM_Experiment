@@ -50,7 +50,16 @@ end Main;
 
 architecture Behavioral of Main is
 
+component DigitLights is
+	Port ( L : out  STD_LOGIC_VECTOR (6 downto 0);
+           NUMBER : in  INTEGER);
+end component;
+
+	signal digitLights1: INTEGER := 0;
+	signal digitLights2: INTEGER := 9;
+
 begin
+	
 	process(CLK, RST)
 	begin
 		L 			<= "0000000000000000";
@@ -64,9 +73,8 @@ begin
 		Ram2OE 	<= '0';
 		Ram2WE	<= '0';
 		Ram2EN	<= '0';
-		DYP0		<= "0000000";
-		DYP1		<= "0000000";
 	end process;
-
+	U1: DigitLights port map (DYP0,digitLights1);
+	U2: DigitLights port map (DYP1,digitLights2);
 end Behavioral;
 

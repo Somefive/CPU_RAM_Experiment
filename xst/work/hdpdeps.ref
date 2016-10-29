@@ -1,7 +1,15 @@
-V3 3
-FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd 2016/10/29.15:04:16 P.20131013
-EN work/Main 1477724676 \
+V3 7
+FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.vhd 2016/10/29.15:25:12 P.20131013
+EN work/DigitLights 1477726313 \
+      FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/DigitLights/Behavioral 1477726314 \
+      FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.vhd \
+      EN work/DigitLights 1477726313
+FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd 2016/10/29.15:31:49 P.20131013
+EN work/Main 1477726315 \
       FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Main/Behavioral 1477724677 \
-      FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd EN work/Main 1477724676
+AR work/Main/Behavioral 1477726316 \
+      FL D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd EN work/Main 1477726315 \
+      CP DigitLights

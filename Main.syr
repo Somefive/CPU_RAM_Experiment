@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: Main.prj
 
@@ -104,6 +104,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.vhd" in Library work.
+Architecture behavioral of Entity digitlights is up to date.
 Compiling vhdl file "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd" in Library work.
 Entity <main> compiled.
 Entity <main> (Architecture <behavioral>) compiled.
@@ -113,12 +115,17 @@ Entity <main> (Architecture <behavioral>) compiled.
 =========================================================================
 Analyzing hierarchy for entity <Main> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <DigitLights> in library <work> (architecture <behavioral>).
+
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Main> in library <work> (Architecture <behavioral>).
 Entity <Main> analyzed. Unit <Main> generated.
+
+Analyzing Entity <DigitLights> in library <work> (Architecture <behavioral>).
+Entity <DigitLights> analyzed. Unit <DigitLights> generated.
 
 
 =========================================================================
@@ -127,18 +134,31 @@ Entity <Main> analyzed. Unit <Main> generated.
 
 Performing bidirectional port resolution...
 
+Synthesizing Unit <DigitLights>.
+    Related source file is "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.vhd".
+    Found 16x7-bit ROM for signal <L$mux0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <DigitLights> synthesized.
+
+
 Synthesizing Unit <Main>.
     Related source file is "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd".
 WARNING:Xst:647 - Input <CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <RST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <SW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <digitLights2> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000001001.
+WARNING:Xst:653 - Signal <digitLights1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
 Unit <Main> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+
 =========================================================================
 
 =========================================================================
@@ -149,7 +169,10 @@ Found no macro
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+
 =========================================================================
 
 =========================================================================
@@ -195,8 +218,9 @@ Design Statistics
 # IOs                              : 122
 
 Cell Usage :
-# BELS                             : 1
+# BELS                             : 2
 #      GND                         : 1
+#      VCC                         : 1
 # IO Buffers                       : 104
 #      OBUF                        : 104
 =========================================================================
@@ -250,14 +274,14 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.92 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.90 secs
  
 --> 
 
-Total memory usage is 291624 kilobytes
+Total memory usage is 291632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
