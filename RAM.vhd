@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:27:01 10/29/2016 
+-- Create Date:    19:25:36 10/29/2016 
 -- Design Name: 
--- Module Name:    SRAMController - Behavioral 
+-- Module Name:    RAM - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
