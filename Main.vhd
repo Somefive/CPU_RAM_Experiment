@@ -58,10 +58,24 @@ end component;
     signal state: INTEGER := 0; --初态
 	 shared variable tempAddr: STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --暂存地址的临时变量
 	 shared variable tempData: STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --暂存数据的临时变量
-	 shared variable offset: INTEGER RANGE 0 TO 10 := 0; --记录读写的次数 10次为上限
-	 signal real_offset: INTEGER RANGE 0 TO 10 := 0; --记录读写的次数 10次为上限
+	 shared variable offset: INTEGER range 0 to 10 := 0; --记录读写的次数 10次为上限
+	 signal real_offset: INTEGER range 0 to 10 := 0; --记录读写的次数 10次为上限
 	 shared variable temp_1_oe,temp_1_we,temp_2_oe,temp_2_we: STD_LOGIC := '1'; --暂存使能信号
 	 shared variable temp_1_en,temp_2_en: STD_LOGIC := '0'; --暂存使能信号
+	 
+	 shared variable inputRam1Addr: STD_LOGIC_VECTOR(15 downto 0):= "0000000000000000";
+	 shared variable inputRam1Data: STD_LOGIC_VECTOR(15 downto 0):= "0000000000000000";
+	 shared variable inputRam2Addr: STD_LOGIC_VECTOR(15 downto 0):= "0000000000000000";
+	 shared variable inputRam2Data: STD_LOGIC_VECTOR(15 downto 0):= "0000000000000000";
+	 
+	 shared variable outputRam1Addr: STD_LOGIC_VECTOR(15 downto 0);
+	 shared variable outputRam1Data: STD_LOGIC_VECTOR(15 downto 0);
+	 shared variable outputRam2Addr: STD_LOGIC_VECTOR(15 downto 0);
+	 shared variable outputRam2Data: STD_LOGIC_VECTOR(15 downto 0);
+	 
+	 shared variable Ram1State: INTEGER range 0 to 15 := 0;
+	 shared variable Ram2State: INTEGER range 0 to 15 := 0;
+	 
 begin
     process(CLK , RST)
 	 begin
