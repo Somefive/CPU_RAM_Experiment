@@ -181,21 +181,22 @@ begin
 			   end case;
 		  end if;
 		  
-		  L(15 downto 8) <= tempAddr(7 downto 0); --输出地址低8位
-		  L(7 downto 0) <= tempData(7 downto 0); --输出数据低8位
-		  
-		  Ram1OE <= temp_1_oe;
-		  Ram2OE <= temp_2_oe;
-		  Ram1WE <= temp_1_we;
-		  Ram2WE <= temp_2_we;
-		  Ram1EN <= temp_1_en;
-		  Ram2EN <= temp_2_en;
-		  
-		  rdn <= '1';
-		  wrn <= '1';
+
 	 end process;
 
 	 real_offset <= offset;
+	 Ram1OE <= temp_1_oe;
+	 Ram2OE <= temp_2_oe;
+	 Ram1WE <= temp_1_we;
+	 Ram2WE <= temp_2_we;
+	 Ram1EN <= temp_1_en;
+	 Ram2EN <= temp_2_en;
+	 
+	 L(15 downto 8) <= tempAddr(7 downto 0); --输出地址低8位
+	 L(7 downto 0) <= tempData(7 downto 0); --输出数据低8位
+		  
+	 rdn <= '1';
+	 wrn <= '1';
 			  			
     L1: DigitLights port map (DYP0,state);
 	 L2: DigitLights port map (DYP1,real_offset);

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Main.prj
 
@@ -122,8 +122,8 @@ Analyzing hierarchy for entity <DigitLights> in library <work> (architecture <be
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <Main> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <temp_1_en$mux0000> in unit <Main> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <temp_2_en$mux0000> in unit <Main> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp_1_en> in unit <Main> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <temp_2_en> in unit <Main> has a constant value of 0 during circuit operation. The register is replaced by logic.
 Entity <Main> analyzed. Unit <Main> generated.
 
 Analyzing Entity <DigitLights> in library <work> (Architecture <behavioral>).
@@ -147,8 +147,6 @@ Unit <DigitLights> synthesized.
 
 Synthesizing Unit <Main>.
     Related source file is "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.vhd".
-WARNING:Xst:646 - Signal <temp_2_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <temp_1_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 13                                             |
@@ -487,14 +485,14 @@ Offset:              9.049ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.09 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.95 secs
  
 --> 
 
-Total memory usage is 324028 kilobytes
+Total memory usage is 323984 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 
