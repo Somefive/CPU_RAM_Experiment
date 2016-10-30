@@ -1,0 +1,1091 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\Program\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc Main.ucf -p xc3s1200e-fg320-4
+DigitLights.ngc DigitLights.ngd
+
+Reading NGO file
+"D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "Main.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[0]" LOC = C7;> [Main.ucf(3)]:
+   NET "DYP0[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[0]" LOC = C7;> [Main.ucf(3)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[1]" LOC = D7;> [Main.ucf(4)]:
+   NET "DYP0[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[1]" LOC = D7;> [Main.ucf(4)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[2]" LOC = E7;> [Main.ucf(5)]:
+   NET "DYP0[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[2]" LOC = E7;> [Main.ucf(5)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[3]" LOC = F7;> [Main.ucf(6)]:
+   NET "DYP0[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[3]" LOC = F7;> [Main.ucf(6)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[4]" LOC = A8;> [Main.ucf(7)]:
+   NET "DYP0[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[4]" LOC = A8;> [Main.ucf(7)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[5]" LOC = E8;> [Main.ucf(8)]:
+   NET "DYP0[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[5]" LOC = E8;> [Main.ucf(8)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DYP0[6]" LOC = F8;> [Main.ucf(9)]:
+   NET "DYP0[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DYP0[6]" LOC = F8;> [Main.ucf(9)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "clk" LOC = U9;> [Main.ucf(10)]: NET
+   "clk" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "clk" LOC = U9;> [Main.ucf(10)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[0]" LOC = T7;>
+   [Main.ucf(11)]: NET "input[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[0]" LOC = T7;> [Main.ucf(11)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[1]" LOC = R7;>
+   [Main.ucf(12)]: NET "input[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[1]" LOC = R7;> [Main.ucf(12)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[2]" LOC = U8;>
+   [Main.ucf(13)]: NET "input[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[2]" LOC = U8;> [Main.ucf(13)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[3]" LOC = V4;>
+   [Main.ucf(14)]: NET "input[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[3]" LOC = V4;> [Main.ucf(14)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[4]" LOC = V3;>
+   [Main.ucf(15)]: NET "input[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[4]" LOC = V3;> [Main.ucf(15)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[5]" LOC = V2;>
+   [Main.ucf(16)]: NET "input[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[5]" LOC = V2;> [Main.ucf(16)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[6]" LOC = U1;>
+   [Main.ucf(17)]: NET "input[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[6]" LOC = U1;> [Main.ucf(17)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[7]" LOC = R4;>
+   [Main.ucf(18)]: NET "input[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[7]" LOC = R4;> [Main.ucf(18)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[8]" LOC = R1;>
+   [Main.ucf(19)]: NET "input[8]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[8]" LOC = R1;> [Main.ucf(19)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[9]" LOC = N2;>
+   [Main.ucf(20)]: NET "input[9]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[9]" LOC = N2;> [Main.ucf(20)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[10]" LOC = N1;>
+   [Main.ucf(21)]: NET "input[10]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[10]" LOC = N1;> [Main.ucf(21)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[11]" LOC = M1;>
+   [Main.ucf(22)]: NET "input[11]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[11]" LOC = M1;> [Main.ucf(22)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[12]" LOC = K7;>
+   [Main.ucf(23)]: NET "input[12]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[12]" LOC = K7;> [Main.ucf(23)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[13]" LOC = K2;>
+   [Main.ucf(24)]: NET "input[13]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[13]" LOC = K2;> [Main.ucf(24)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[14]" LOC = J7;>
+   [Main.ucf(25)]: NET "input[14]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[14]" LOC = J7;> [Main.ucf(25)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "input[15]" LOC = J6;>
+   [Main.ucf(26)]: NET "input[15]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "input[15]" LOC = J6;> [Main.ucf(26)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[0]" LOC = D10;>
+   [Main.ucf(27)]: NET "led_out[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[0]" LOC = D10;> [Main.ucf(27)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[1]" LOC = E10;>
+   [Main.ucf(28)]: NET "led_out[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[1]" LOC = E10;> [Main.ucf(28)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[2]" LOC = A11;>
+   [Main.ucf(29)]: NET "led_out[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[2]" LOC = A11;> [Main.ucf(29)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[3]" LOC = B11;>
+   [Main.ucf(30)]: NET "led_out[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[3]" LOC = B11;> [Main.ucf(30)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[4]" LOC = C11;>
+   [Main.ucf(31)]: NET "led_out[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[4]" LOC = C11;> [Main.ucf(31)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[5]" LOC = D11;>
+   [Main.ucf(32)]: NET "led_out[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[5]" LOC = D11;> [Main.ucf(32)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[6]" LOC = E11;>
+   [Main.ucf(33)]: NET "led_out[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[6]" LOC = E11;> [Main.ucf(33)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[7]" LOC = F11;>
+   [Main.ucf(34)]: NET "led_out[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[7]" LOC = F11;> [Main.ucf(34)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[8]" LOC = A12;>
+   [Main.ucf(35)]: NET "led_out[8]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[8]" LOC = A12;> [Main.ucf(35)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[9]" LOC = E12;>
+   [Main.ucf(36)]: NET "led_out[9]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[9]" LOC = E12;> [Main.ucf(36)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[10]" LOC = F12;>
+   [Main.ucf(37)]: NET "led_out[10]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[10]" LOC = F12;> [Main.ucf(37)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[11]" LOC = A13;>
+   [Main.ucf(38)]: NET "led_out[11]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[11]" LOC = A13;> [Main.ucf(38)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[12]" LOC = B13;>
+   [Main.ucf(39)]: NET "led_out[12]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[12]" LOC = B13;> [Main.ucf(39)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[13]" LOC = D13;>
+   [Main.ucf(40)]: NET "led_out[13]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[13]" LOC = D13;> [Main.ucf(40)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[14]" LOC = E13;>
+   [Main.ucf(41)]: NET "led_out[14]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[14]" LOC = E13;> [Main.ucf(41)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led_out[15]" LOC = A14;>
+   [Main.ucf(42)]: NET "led_out[15]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led_out[15]" LOC = A14;> [Main.ucf(42)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[0]" LOC = C17;>
+   [Main.ucf(43)]: NET "ram_1_addr[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[0]" LOC = C17;> [Main.ucf(43)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[1]" LOC = C18;>
+   [Main.ucf(44)]: NET "ram_1_addr[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[1]" LOC = C18;> [Main.ucf(44)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[2]" LOC = D16;>
+   [Main.ucf(45)]: NET "ram_1_addr[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[2]" LOC = D16;> [Main.ucf(45)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[3]" LOC = D17;>
+   [Main.ucf(46)]: NET "ram_1_addr[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[3]" LOC = D17;> [Main.ucf(46)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[4]" LOC = E15;>
+   [Main.ucf(47)]: NET "ram_1_addr[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[4]" LOC = E15;> [Main.ucf(47)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[5]" LOC = E16;>
+   [Main.ucf(48)]: NET "ram_1_addr[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[5]" LOC = E16;> [Main.ucf(48)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[6]" LOC = F14;>
+   [Main.ucf(49)]: NET "ram_1_addr[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[6]" LOC = F14;> [Main.ucf(49)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[7]" LOC = F15;>
+   [Main.ucf(50)]: NET "ram_1_addr[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[7]" LOC = F15;> [Main.ucf(50)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[8]" LOC = F17;>
+   [Main.ucf(51)]: NET "ram_1_addr[8]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[8]" LOC = F17;> [Main.ucf(51)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[9]" LOC = F18;>
+   [Main.ucf(52)]: NET "ram_1_addr[9]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[9]" LOC = F18;> [Main.ucf(52)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[10]" LOC = G13;>
+   [Main.ucf(53)]: NET "ram_1_addr[10]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[10]" LOC = G13;> [Main.ucf(53)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[11]" LOC = G14;>
+   [Main.ucf(54)]: NET "ram_1_addr[11]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[11]" LOC = G14;> [Main.ucf(54)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[12]" LOC = G15;>
+   [Main.ucf(55)]: NET "ram_1_addr[12]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[12]" LOC = G15;> [Main.ucf(55)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[13]" LOC = G16;>
+   [Main.ucf(56)]: NET "ram_1_addr[13]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[13]" LOC = G16;> [Main.ucf(56)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[14]" LOC = H14;>
+   [Main.ucf(57)]: NET "ram_1_addr[14]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[14]" LOC = H14;> [Main.ucf(57)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[15]" LOC = H15;>
+   [Main.ucf(58)]: NET "ram_1_addr[15]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[15]" LOC = H15;> [Main.ucf(58)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[16]" LOC = H16;>
+   [Main.ucf(59)]: NET "ram_1_addr[16]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[16]" LOC = H16;> [Main.ucf(59)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_addr[17]" LOC = H17;>
+   [Main.ucf(60)]: NET "ram_1_addr[17]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_addr[17]" LOC = H17;> [Main.ucf(60)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[0]" LOC = J12;>
+   [Main.ucf(61)]: NET "ram_1_data[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[0]" LOC = J12;> [Main.ucf(61)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[1]" LOC = J13;>
+   [Main.ucf(62)]: NET "ram_1_data[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[1]" LOC = J13;> [Main.ucf(62)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[2]" LOC = J14;>
+   [Main.ucf(63)]: NET "ram_1_data[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[2]" LOC = J14;> [Main.ucf(63)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[3]" LOC = J15;>
+   [Main.ucf(64)]: NET "ram_1_data[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[3]" LOC = J15;> [Main.ucf(64)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[4]" LOC = J16;>
+   [Main.ucf(65)]: NET "ram_1_data[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[4]" LOC = J16;> [Main.ucf(65)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[5]" LOC = J17;>
+   [Main.ucf(66)]: NET "ram_1_data[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[5]" LOC = J17;> [Main.ucf(66)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[6]" LOC = K12;>
+   [Main.ucf(67)]: NET "ram_1_data[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[6]" LOC = K12;> [Main.ucf(67)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[7]" LOC = K13;>
+   [Main.ucf(68)]: NET "ram_1_data[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[7]" LOC = K13;> [Main.ucf(68)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[8]" LOC = K14;>
+   [Main.ucf(69)]: NET "ram_1_data[8]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[8]" LOC = K14;> [Main.ucf(69)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[9]" LOC = K15;>
+   [Main.ucf(70)]: NET "ram_1_data[9]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[9]" LOC = K15;> [Main.ucf(70)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[10]" LOC = L15;>
+   [Main.ucf(71)]: NET "ram_1_data[10]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[10]" LOC = L15;> [Main.ucf(71)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[11]" LOC = L16;>
+   [Main.ucf(72)]: NET "ram_1_data[11]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[11]" LOC = L16;> [Main.ucf(72)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[12]" LOC = L17;>
+   [Main.ucf(73)]: NET "ram_1_data[12]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[12]" LOC = L17;> [Main.ucf(73)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[13]" LOC = L18;>
+   [Main.ucf(74)]: NET "ram_1_data[13]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[13]" LOC = L18;> [Main.ucf(74)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[14]" LOC = M13;>
+   [Main.ucf(75)]: NET "ram_1_data[14]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[14]" LOC = M13;> [Main.ucf(75)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_data[15]" LOC = M14;>
+   [Main.ucf(76)]: NET "ram_1_data[15]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_data[15]" LOC = M14;> [Main.ucf(76)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_en" LOC = M15;>
+   [Main.ucf(77)]: NET "ram_1_en" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_en" LOC = M15;> [Main.ucf(77)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_oe" LOC = M16;>
+   [Main.ucf(78)]: NET "ram_1_oe" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_oe" LOC = M16;> [Main.ucf(78)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_1_we" LOC = M18;>
+   [Main.ucf(79)]: NET "ram_1_we" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_1_we" LOC = M18;> [Main.ucf(79)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[0]" LOC = N14;>
+   [Main.ucf(80)]: NET "ram_2_addr[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[0]" LOC = N14;> [Main.ucf(80)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[1]" LOC = N15;>
+   [Main.ucf(81)]: NET "ram_2_addr[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[1]" LOC = N15;> [Main.ucf(81)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[2]" LOC = N18;>
+   [Main.ucf(82)]: NET "ram_2_addr[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[2]" LOC = N18;> [Main.ucf(82)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[3]" LOC = P16;>
+   [Main.ucf(83)]: NET "ram_2_addr[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[3]" LOC = P16;> [Main.ucf(83)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[4]" LOC = P17;>
+   [Main.ucf(84)]: NET "ram_2_addr[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[4]" LOC = P17;> [Main.ucf(84)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[5]" LOC = P18;>
+   [Main.ucf(85)]: NET "ram_2_addr[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[5]" LOC = P18;> [Main.ucf(85)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[6]" LOC = R15;>
+   [Main.ucf(86)]: NET "ram_2_addr[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[6]" LOC = R15;> [Main.ucf(86)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[7]" LOC = R16;>
+   [Main.ucf(87)]: NET "ram_2_addr[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[7]" LOC = R16;> [Main.ucf(87)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[8]" LOC = R18;>
+   [Main.ucf(88)]: NET "ram_2_addr[8]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[8]" LOC = R18;> [Main.ucf(88)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[9]" LOC = T17;>
+   [Main.ucf(89)]: NET "ram_2_addr[9]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[9]" LOC = T17;> [Main.ucf(89)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[10]" LOC = T18;>
+   [Main.ucf(90)]: NET "ram_2_addr[10]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[10]" LOC = T18;> [Main.ucf(90)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[11]" LOC = U18;>
+   [Main.ucf(91)]: NET "ram_2_addr[11]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[11]" LOC = U18;> [Main.ucf(91)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[12]" LOC = V15;>
+   [Main.ucf(92)]: NET "ram_2_addr[12]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[12]" LOC = V15;> [Main.ucf(92)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[13]" LOC = V13;>
+   [Main.ucf(93)]: NET "ram_2_addr[13]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[13]" LOC = V13;> [Main.ucf(93)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[14]" LOC = V12;>
+   [Main.ucf(94)]: NET "ram_2_addr[14]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[14]" LOC = V12;> [Main.ucf(94)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[15]" LOC = V9;>
+   [Main.ucf(95)]: NET "ram_2_addr[15]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[15]" LOC = V9;> [Main.ucf(95)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[16]" LOC = U16;>
+   [Main.ucf(96)]: NET "ram_2_addr[16]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[16]" LOC = U16;> [Main.ucf(96)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_addr[17]" LOC = U15;>
+   [Main.ucf(97)]: NET "ram_2_addr[17]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_addr[17]" LOC = U15;> [Main.ucf(97)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[0]" LOC = U13;>
+   [Main.ucf(98)]: NET "ram_2_data[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[0]" LOC = U13;> [Main.ucf(98)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[1]" LOC = T16;>
+   [Main.ucf(99)]: NET "ram_2_data[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[1]" LOC = T16;> [Main.ucf(99)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[2]" LOC = T15;>
+   [Main.ucf(100)]: NET "ram_2_data[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[2]" LOC = T15;> [Main.ucf(100)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[3]" LOC = T14;>
+   [Main.ucf(101)]: NET "ram_2_data[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[3]" LOC = T14;> [Main.ucf(101)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[4]" LOC = T12;>
+   [Main.ucf(102)]: NET "ram_2_data[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[4]" LOC = T12;> [Main.ucf(102)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[5]" LOC = R13;>
+   [Main.ucf(103)]: NET "ram_2_data[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[5]" LOC = R13;> [Main.ucf(103)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[6]" LOC = R14;>
+   [Main.ucf(104)]: NET "ram_2_data[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[6]" LOC = R14;> [Main.ucf(104)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[7]" LOC = R12;>
+   [Main.ucf(105)]: NET "ram_2_data[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[7]" LOC = R12;> [Main.ucf(105)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[8]" LOC = R11;>
+   [Main.ucf(106)]: NET "ram_2_data[8]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[8]" LOC = R11;> [Main.ucf(106)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[9]" LOC = R10;>
+   [Main.ucf(107)]: NET "ram_2_data[9]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[9]" LOC = R10;> [Main.ucf(107)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[10]" LOC = P13;>
+   [Main.ucf(108)]: NET "ram_2_data[10]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[10]" LOC = P13;> [Main.ucf(108)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[11]" LOC = P12;>
+   [Main.ucf(109)]: NET "ram_2_data[11]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[11]" LOC = P12;> [Main.ucf(109)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[12]" LOC = P11;>
+   [Main.ucf(110)]: NET "ram_2_data[12]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[12]" LOC = P11;> [Main.ucf(110)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[13]" LOC = P10;>
+   [Main.ucf(111)]: NET "ram_2_data[13]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[13]" LOC = P10;> [Main.ucf(111)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[14]" LOC = N12;>
+   [Main.ucf(112)]: NET "ram_2_data[14]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[14]" LOC = N12;> [Main.ucf(112)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_data[15]" LOC = N11;>
+   [Main.ucf(113)]: NET "ram_2_data[15]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_data[15]" LOC = N11;> [Main.ucf(113)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_en" LOC = N10;>
+   [Main.ucf(114)]: NET "ram_2_en" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_en" LOC = N10;> [Main.ucf(114)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_oe" LOC = R9;>
+   [Main.ucf(115)]: NET "ram_2_oe" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_oe" LOC = R9;> [Main.ucf(115)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "ram_2_we" LOC = M9;>
+   [Main.ucf(116)]: NET "ram_2_we" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "ram_2_we" LOC = M9;> [Main.ucf(116)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "rst" LOC = U10;> [Main.ucf(117)]:
+   NET "rst" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "rst" LOC = U10;> [Main.ucf(117)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "rdn" LOC = C14;> [Main.ucf(123)]:
+   NET "rdn" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "rdn" LOC = C14;> [Main.ucf(123)]' could not be found and so the Locate
+   constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "wrn" LOC = U5;> [Main.ucf(124)]:
+   NET "wrn" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "wrn" LOC = U5;> [Main.ucf(124)]' could not be found and so the Locate
+   constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:   117
+  Number of warnings: 117
+
+Total memory usage is 191356 kilobytes
+
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "DigitLights.bld"...

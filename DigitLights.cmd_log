@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.xst" -ofn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Main.ucf -p xc3s1200e-fg320-4 DigitLights.ngc DigitLights.ngd  
+xst -intstyle ise -ifn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.xst" -ofn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Main.ucf -p xc3s1200e-fg320-4 DigitLights.ngc DigitLights.ngd  
+xst -intstyle ise -ifn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.xst" -ofn "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Main.ucf -p xc3s1200e-fg320-4 DigitLights.ngc DigitLights.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Main.ucf -p xc3s1200e-fg320-4 DigitLights.ngc DigitLights.ngd  

@@ -36,10 +36,10 @@ entity RAM is
       CE : out  STD_LOGIC;
       OE : out  STD_LOGIC;
       WE : out  STD_LOGIC;
-      InputAddr : in  STD_LOGIC_VECTOR(15 downto 0);
 		InputData : in  STD_LOGIC_VECTOR(15 downto 0);
-      OutputAddr : out  STD_LOGIC_VECTOR(15 downto 0);
+      InputAddr : in  STD_LOGIC_VECTOR(15 downto 0);
 		OutputData : out STD_LOGIC_VECTOR(15 downto 0);
+      OutputAddr : out  STD_LOGIC_VECTOR(15 downto 0);
 		Flag : in  INTEGER);
 end RAM;
 

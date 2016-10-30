@@ -3,16 +3,17 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat Oct 29 22:01:24 2016">
+<application name="pn" timeStamp="Sun Oct 30 10:51:39 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="549D72CD3262497898801520086253DC" type="project"/>
-<property name="ProjectIteration" value="19" type="project"/>
+<property name="ProjectIteration" value="33" type="project"/>
 <property name="ProjectFile" value="D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/CPU_RAM_Experiment.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-10-29T14:41:27" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
 <property name="PROPEXT_xilxSynthMaxFanout_virtex2" value="100000" type="process"/>
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
+<property name="PROP_FitterReportFormat" value="HTML" type="process"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
@@ -21,14 +22,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
 <property name="PROP_UseSmartGuide" value="false" type="design"/>
+<property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-10-29T14:41:27" type="design"/>
 <property name="PROP_intWbtProjectID" value="549D72CD3262497898801520086253DC" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="19" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="33" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
-<property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Spartan3E" type="design"/>
 <property name="PROP_DevDevice" value="xc3s1200e" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan3e" type="design"/>

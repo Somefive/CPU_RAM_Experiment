@@ -1,0 +1,111 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Program/ISE/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Program/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Program/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/pa.fromNetlist.tcl
+# create_project -name CPU_RAM_Experiment -dir "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/planAhead_run_5" -part xc3s1200efg320-4
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/DigitLights.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "Main.ucf" [current_fileset -constrset]
+Adding file 'D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf' to fileset 'constrs_1'
+# add_files [list {Main.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design DigitLights.ngc ...
+WARNING:NetListWriters:298 - No output is written to DigitLights.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file DigitLights.edif ...
+ngc2edif: Total memory usage is 86184 kilobytes
+
+Parsing EDIF File [./planAhead_run_5/CPU_RAM_Experiment.data/cache/DigitLights_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_5/CPU_RAM_Experiment.data/cache/DigitLights_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library D:/Program/ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[0]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:3]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[1]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:4]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[2]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:5]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[3]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:6]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[4]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:7]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[5]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:8]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'DYP0[6]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:9]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'clk' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:10]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[0]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:11]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[1]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:12]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[2]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:13]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[3]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:14]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[4]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:15]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[5]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:16]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[6]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:17]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[7]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:18]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[8]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:19]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[9]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:20]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[10]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:21]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[11]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:22]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[12]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:23]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[13]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:24]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[14]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:25]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'input[15]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:26]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[0]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:27]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[1]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:28]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[2]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:29]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[3]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:30]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[4]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:31]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[5]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:32]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[6]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:33]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[7]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:34]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[8]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:35]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[9]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:36]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[10]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:37]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[11]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:38]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[12]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:39]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[13]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:40]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[14]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:41]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'led_out[15]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:42]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[0]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:43]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[1]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:44]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[2]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:45]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[3]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:46]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[4]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:47]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[5]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:48]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[6]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:49]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[7]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:50]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[8]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:51]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ram_1_addr[9]' [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf:52]
+INFO: [Common 17-14] Message 'Constraints 18-11' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_limit to change the current settings.
+Finished Parsing UCF File [D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/Main.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: eb8d223d
+link_design: Time (s): elapsed = 00:00:09 . Memory (MB): peak = 601.227 ; gain = 132.758
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun Oct 30 10:32:15 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

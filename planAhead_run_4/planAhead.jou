@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Oct 30 09:54:52 2016
+# Process ID: 12020
+# Log file: D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/planAhead_run_4/planAhead.log
+# Journal file: D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Study/THU/2016Autumn/CPU/CPU_RAM_Experiment/pa.fromNetlist.tcl

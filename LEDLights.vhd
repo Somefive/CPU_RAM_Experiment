@@ -44,7 +44,7 @@ architecture Behavioral of LEDLights is
 
 begin
 
-	process(DisplayState)
+	process(DisplayState,data1,addr1,data2,addr2,display)
 	begin
 		case DisplayState is
 			when 0 =>

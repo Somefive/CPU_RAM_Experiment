@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    14:56:12 10/29/2016 
+-- Create Date:    16:28:33 11/05/2015 
 -- Design Name: 
--- Module Name:    Main - Behavioral 
+-- Module Name:    io - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,8 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_SIGNED.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL; 
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,22 +32,20 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 --use UNISIM.VComponents.all;
 
 entity Main is
-    Port ( CLK : in  STD_LOGIC;
-           RST : in  STD_LOGIC;
-           SW : in  STD_LOGIC_VECTOR (15 downto 0);
-           L : out  STD_LOGIC_VECTOR (15 downto 0);
-           Ram1Addr : out  STD_LOGIC_VECTOR (17 downto 0);
-           Ram1Data : inout  STD_LOGIC_VECTOR (15 downto 0);
-           Ram1OE : out  STD_LOGIC;
-           Ram1WE : out  STD_LOGIC;
-           Ram1EN : out  STD_LOGIC;
-           Ram2Addr : out  STD_LOGIC_VECTOR (17 downto 0);
-           Ram2Data : inout  STD_LOGIC_VECTOR (15 downto 0);
-           Ram2OE : out  STD_LOGIC;
-           Ram2WE : out  STD_LOGIC;
-           Ram2EN : out  STD_LOGIC;
-           DYP0 : out  STD_LOGIC_VECTOR (6 downto 0);
-           DYP1 : out  STD_LOGIC_VECTOR (6 downto 0));
+    port(CLK,RST: in STD_LOGIC; --单步时钟信号CLK和复位信号RST
+		  SW: in STD_LOGIC_VECTOR(15 downto 0); --初始地址和数据输入
+		  Ram1Addr: out STD_LOGIC_VECTOR(17 downto 0); --RAM1地址
+		  L: out STD_LOGIC_VECTOR(15 downto 0); --发光二极管显示地址低8位及数据低8位
+		  Ram1Data: inout STD_LOGIC_VECTOR(15 downto 0); --RAM1数据
+		  Ram1OE,Ram1WE,Ram1EN: out STD_LOGIC; --RAM1输出使能、写使能、使能
+		  Ram2Addr: out STD_LOGIC_VECTOR(17 downto 0); --RAM2地址
+		  Ram2Data: inout STD_LOGIC_VECTOR(15 downto 0); --RAM2数据
+		  Ram2OE,Ram2WE,Ram2EN: out STD_LOGIC; --RAM2输出使能、写使能、使能
+		  DYP0: out STD_LOGIC_VECTOR(6 downto 0); --七段数码管测试输出
+		  DYP1: out STD_LOGIC_VECTOR(6 downto 0); --七段数码管测试输出
+		  RDN: out STD_LOGIC; --锁住串口
+		  WRN: out STD_LOGIC --锁住串口
+        );
 end Main;
 
 architecture Behavioral of Main is
@@ -57,131 +55,150 @@ component DigitLights is
            NUMBER : in  INTEGER);
 end component;
 
-component RAM is
-    Port (
-		Data : inout  STD_LOGIC_VECTOR(15 downto 0);
-		Addr : out  STD_LOGIC_VECTOR(17 downto 0);
-      CE : out  STD_LOGIC;
-      OE : out  STD_LOGIC;
-      WE : out  STD_LOGIC;
-      InputAddr : in  STD_LOGIC_VECTOR(15 downto 0);
-		InputData : in  STD_LOGIC_VECTOR(15 downto 0);
-      OutputAddr : out  STD_LOGIC_VECTOR(15 downto 0);
-		OutputData : out STD_LOGIC_VECTOR(15 downto 0);
-		Flag : in  INTEGER);
-end component;
-
-component LEDLights is
-    Port ( data1 : in  STD_LOGIC_VECTOR(15 downto 0);
-           addr1 : in  STD_LOGIC_VECTOR(15 downto 0);
-			  data2 : in  STD_LOGIC_VECTOR(15 downto 0);
-           addr2 : in  STD_LOGIC_VECTOR(15 downto 0); 
-           display : in  STD_LOGIC_VECTOR(15 downto 0);
-           L : out  STD_LOGIC_VECTOR(15 downto 0);
-			  DisplayState : in  INTEGER
-			  );
-end component;
-	
-	signal state: INTEGER := 0;
-	signal state_next: INTEGER := 0;
-	
-	signal data: STD_LOGIC_VECTOR (15 downto 0):="0000000000000000";
-	signal addr: STD_LOGIC_VECTOR (15 downto 0):="0000000000000000";
-
-	
-	signal offset: INTEGER := 0;
-	
-	signal InputAddr1: STD_LOGIC_VECTOR (15 downto 0);
-	signal InputData1: STD_LOGIC_VECTOR (15 downto 0);
-	signal InputAddr2: STD_LOGIC_VECTOR (15 downto 0);
-	signal InputData2: STD_LOGIC_VECTOR (15 downto 0);
-	
-	signal OutputAddr1: STD_LOGIC_VECTOR (15 downto 0);
-	signal OutputData1: STD_LOGIC_VECTOR (15 downto 0);
-	signal OutputAddr2: STD_LOGIC_VECTOR (15 downto 0);
-	signal OutputData2: STD_LOGIC_VECTOR (15 downto 0);
-	
-	-- 0 Reset; 1 Read; 2 Write;
-	signal Ram1State: INTEGER := 0;
-	signal Ram2State: INTEGER := 0;
-	
-	-- 0 Display normally; 1 Ram1 Combine; 2 Ram2 Combine; 3 Ram1 Data; 4 Ram2 Data; 5 Ram1 Addr; 6 Ram2 Addr;
-	signal DisplayState: INTEGER := 0;
-	signal Display: STD_LOGIC_VECTOR (15 downto 0):="0000000000000000";
-	
+    signal state: INTEGER := 0; --初态
+	 shared variable tempAddr: STD_LOGIC_VECTOR(17 downto 0) := "000000000000000000"; --暂存地址的临时变量
+	 shared variable tempData: STD_LOGIC_VECTOR(15 downto 0) := "0000000000000000"; --暂存数据的临时变量
+	 shared variable offset: INTEGER RANGE 0 TO 10 := 0; --记录读写的次数 10次为上限
+	 signal real_offset: INTEGER RANGE 0 TO 10 := 0; --记录读写的次数 10次为上限
+	 shared variable temp_1_oe,temp_1_we,temp_2_oe,temp_2_we: STD_LOGIC := '1'; --暂存使能信号
+	 shared variable temp_1_en,temp_2_en: STD_LOGIC := '0'; --暂存使能信号
 begin
-	
-	process(CLK, RST)
-	begin
-		if(RST='0')then
-			state <= 0;
-			offset <= 0;
-			Display <= "0000000000000000";
-			Ram1State <= 0;
-			DisplayState <= 0;
-		elsif(CLK'EVENT and CLK='1')then
-			case state is
-				when 0 =>
-					addr <= SW;
-					Display <= addr;
-					state <= 1;
-				when 1 =>
-					data <= SW;
-					Display <= data;
-					state <= 2;
-				when 2 =>
-					InputAddr1 <= addr + conv_std_logic_vector(offset,16);
-					InputData1 <= data + conv_std_logic_vector(offset,16);
-					DisplayState <= 1;
-					state <= 3;
-				when 3 =>
-					Ram1State <= 2;
-					state <= 4;
-				when 4 =>
-					Ram1State <= 0;
-					state <= 5;
-				when 5 =>
-					if(offset=9)then
-						offset <= 0;
-						InputData1	<= "ZZZZZZZZZZZZZZZZ";
-						state <= 6;
-					else
-						offset <= offset+1;
-						state <= 2;
-					end if;
-				when 6 =>
-					InputAddr1	<= addr + conv_std_logic_vector(offset,16);
-					Display <= addr;
-					DisplayState <= 0;
-					state <= 7;
-				when 7 =>
-					Ram1State <= 1;
-					DisplayState <= 3;
-					state <= 8;
-				when 8 =>
-					if(offset=9)then
-						offset <= 0;
-						state <= 9;
-					else
-						offset <= offset+1;
-						state <= 6;
-					end if;
-				when others =>
-					offset <= 0;
-					DisplayState <= 0;
-					Ram1State <= 0;
-					state <= 0;
-			end case;
-		end if;
-	end process;
-	
-	U1: DigitLights port map (DYP0,offset);
-	U2: DigitLights port map (DYP1,state);
-	
-	RAM1: RAM port map (Ram1Data,Ram1Addr,Ram1EN,Ram1OE,Ram1WE,InputData1,InputAddr1,OutputData1,OutputAddr1,Ram1State);
-	RAM2: RAM port map (Ram2Data,Ram2Addr,Ram2EN,Ram2OE,Ram2WE,InputData2,InputAddr2,OutputData2,OutputAddr2,Ram2State);
-	
-	LEDLights1: LEDLights port map (OutputData1, OutputAddr1, OutputData2, OutputAddr2, Display, L, DisplayState);
-	
+    process(CLK , RST)
+	 begin
+	    if(RST = '0') then --RST被按下 初始化
+		      tempAddr := "000000000000000000";
+				tempData := "0000000000000000";
+				offset := 0;
+				state <= 0;
+				temp_1_oe := '1';
+				temp_2_oe := '1';
+				temp_1_we := '1';
+				temp_2_we := '1';
+				temp_1_en := '0';
+				temp_2_en := '0';
+				Ram1Data <= "0000000000000000";
+				Ram2Data <= "0000000000100000";
+				Ram1Addr <= "000000000000000000";
+				Ram2Addr <= "000000000000000000";
+		  elsif(CLK'event and CLK = '1') then --上升沿到来 开始操作
+		      case state is
+				    when 0 => --首个状态 读入地址单元的地址
+					     tempAddr(15 downto 0) := SW;
+					     state <= 1;
+				    when 1 => --第2个状态 读入初始数据 第一次写入RAM1
+					     tempData := SW;
+						  temp_1_we := '0';
+						  Ram1Addr <= tempAddr;
+						  Ram1Data <= tempData;
+						  offset := offset + 1;
+						  state <= 2;		  
+
+					 when 2 => --第3个状态 拉高写信号
+        				  temp_1_we := '1';
+                    state <= 3;
+						  
+				    when 3 => --第4个状态 拉低写信号 地址、数据各加1，然后写入 还需要9次
+					     temp_1_we := '0';
+					     tempData := tempData + '1';
+						  tempAddr := tempAddr + '1';
+						  Ram1Data <= tempData;
+						  Ram1Addr <= tempAddr;
+						  offset := offset + 1;
+						  if(offset < 10) then
+								state <= 2;
+						  elsif(offset = 10) then
+						      offset := 0;
+								state <= 4;
+						  end if;
+						  
+				    when 4 => --第5个状态 准备读RAM1 需要拉高写信号 拉低读信号 同时将数据线设置成高阻
+						  Ram1Data <= "ZZZZZZZZZZZZZZZZ";
+					     temp_1_we := '1';
+						  temp_1_oe := '0';
+						  state <= 5;
+						  Ram1Addr <= tempAddr;
+						  
+				    when 5 => --第6个状态 读RAM1 需要10次
+					     tempData := Ram1Data;
+						  offset := offset + 1;
+						  tempAddr := tempAddr - '1';
+						  Ram1Addr <= tempAddr;
+						  if(offset = 10) then
+						      offset := 0;
+								Ram1Addr <= tempAddr + '1';
+						      state <= 6;
+						  end if;
+						  
+					 when 6 => --第7个状态 切换到RAM2 需要将RAM1的读和写信号拉高 准备写入第一个数据
+                    temp_1_oe := '1';
+						  temp_1_we := '1';
+						  tempData := tempData - '1';
+						  tempAddr := tempAddr + '1';
+						  state <= 7;
+						  	  
+				    when 7 => --第8个状态 写入剩下的10个数据
+					     temp_2_we := '0';
+						  Ram2Data <= tempData;
+						  Ram2Addr <= tempAddr;
+						  offset := offset + 1;
+						  state <= 8;
+						  
+				    when 8 => --第9个状态 拉高写信号
+					     temp_2_we := '1';
+						  state <= 9;
+						  
+				    when 9 => --第10个状态 拉低写信号 继续写
+					     temp_2_we := '0';
+					     tempData := tempData + '1';
+						  tempAddr := tempAddr + '1';
+						  Ram2Data <= tempData;
+						  Ram2Addr <= tempAddr;
+						  offset := offset + 1;
+						  if(offset < 10) then
+								state <= 8;
+						  elsif(offset = 10) then
+						      state <= 10;
+								offset := 0;
+						  end if;
+						  
+					 when 10 => --第11个状态 准备读RAM2 需要拉高写信号 拉低读信号 同时将数据线设置成高阻
+						  Ram2Data <= "ZZZZZZZZZZZZZZZZ";
+					     temp_2_we := '1';
+						  temp_2_oe := '0';
+						  state <= 11;
+					 
+					 when 11 => --第12个状态 继续读
+					     tempData := Ram2Data;
+						  offset := offset + 1;
+						  tempAddr := tempAddr - '1'; 
+						  Ram2Addr <= tempAddr;
+						  if(offset = 10) then
+						      offset := 0;
+								Ram2Addr <= tempAddr + '1';
+						      state <= 12;
+						  end if;
+				    when others=>
+			   end case;
+		  end if;
+		  
+		  L(15 downto 8) <= tempAddr(7 downto 0); --输出地址低8位
+		  L(7 downto 0) <= tempData(7 downto 0); --输出数据低8位
+		  
+		  Ram1OE <= temp_1_oe;
+		  Ram2OE <= temp_2_oe;
+		  Ram1WE <= temp_1_we;
+		  Ram2WE <= temp_2_we;
+		  Ram1EN <= temp_1_en;
+		  Ram2EN <= temp_2_en;
+		  
+		  rdn <= '1';
+		  wrn <= '1';
+	 end process;
+
+	 real_offset <= offset;
+			  			
+    L1: DigitLights port map (DYP0,state);
+	 L2: DigitLights port map (DYP1,real_offset);
+
 end Behavioral;
 
